@@ -2,10 +2,10 @@ cask "xtoolbox" do
   version "0.1.0"
 
   if Hardware::CPU.intel?
-    sha256 "8c2b224853aad4ac5fb34f3eb55b86978aea696f8ac2d56af1d3004562397036"
+    sha256 "679c0de078e7fba3c5c08f2ef400585be9f7ac06a72e614d8b02da6bb337a362"
     url "https://github.com/rainx/xplayground/releases/download/v#{version}/xToolbox-#{version}-mac-x64.zip"
   else
-    sha256 "f8194114d6788b695f014383e8072d6483d9222a266dcb7a00a3992d465edaf8"
+    sha256 "11c95ddb3f4ea613db5b3c769731139ee46f43dd57f62d66ea8ced0a0b8e20c9"
     url "https://github.com/rainx/xplayground/releases/download/v#{version}/xToolbox-#{version}-mac-arm64.zip"
   end
 
