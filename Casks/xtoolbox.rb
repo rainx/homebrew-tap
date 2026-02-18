@@ -1,11 +1,11 @@
 cask "xtoolbox" do
-  version "0.1.0"
+  version "0.2.0"
 
   if Hardware::CPU.intel?
-    sha256 "679c0de078e7fba3c5c08f2ef400585be9f7ac06a72e614d8b02da6bb337a362"
+    sha256 "bcd5992cc20f51012dec3ac62fb175d02d9657eeb1df465e651254341bbcc459"
     url "https://github.com/rainx/xplayground/releases/download/v#{version}/xToolbox-#{version}-mac-x64.zip"
   else
-    sha256 "11c95ddb3f4ea613db5b3c769731139ee46f43dd57f62d66ea8ced0a0b8e20c9"
+    sha256 "f55f392ef140c32154f51e98e0bdef4e61066f6d69a1eab56d48a04fad1c7d21"
     url "https://github.com/rainx/xplayground/releases/download/v#{version}/xToolbox-#{version}-mac-arm64.zip"
   end
 
@@ -23,7 +23,7 @@ cask "xtoolbox" do
   postflight do
     # Remove quarantine attribute to avoid "damaged app" warning
     system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/xToolbox.app"]
+         args: ["-cr", "#{appdir}/xToolbox.app"]
   end
 
   zap trash: [
